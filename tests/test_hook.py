@@ -104,3 +104,9 @@ def test_main_success__conventional_with_scope(cmd, conventional_commit_with_sco
     result = subprocess.call((cmd, "--force-scope", conventional_commit_with_scope_path))
 
     assert result == RESULT_SUCCESS
+
+
+def test_main_success__merge(cmd, merge_commit_path):
+    result = subprocess.call((cmd, merge_commit_path))
+
+    assert result == RESULT_SUCCESS

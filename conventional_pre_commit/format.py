@@ -58,3 +58,8 @@ def is_conventional(input, types=DEFAULT_TYPES, optional_scope=True):
     regex = re.compile(pattern, re.DOTALL)
 
     return bool(regex.match(input))
+
+
+def is_merge(input):
+    """Returns True if input is a merge commit."""
+    return input.startswith("Merged in")

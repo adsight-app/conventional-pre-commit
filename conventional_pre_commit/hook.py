@@ -47,7 +47,7 @@ See {Colors.LBLUE}https://git-scm.com/docs/git-commit/#_discussion{Colors.RESTOR
         )
         return RESULT_FAIL
 
-    if format.is_conventional(message, args.types, args.optional_scope):
+    if format.is_conventional(message, args.types, args.optional_scope) or format.is_merge(message):
         return RESULT_SUCCESS
     else:
         print(
